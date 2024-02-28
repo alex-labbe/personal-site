@@ -1,0 +1,57 @@
+tr {
+    border-bottom: #6d6d6d solid 1px;
+}
+
+tr :nth-child(1){
+    border-bottom: black solid 1px;
+}
+
+
+.album-details{
+    padding-left: 0;
+}
+
+.album-details p {
+    float: left;
+}
+  
+.album-name {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: bold;
+    text-align: left;
+    display: none;
+}
+
+.artist-name {
+    padding-left: 10px;
+    color: #6d6d6d;
+    display: none;
+}
+
+
+.album-image{
+    float: left;
+}
+
+.stars{
+    padding-right: 0;
+    text-align: right;
+}
+
+
+.album-name :hover{
+    text-decoration: underline;
+}
+
+@media (min-width: 500px) {
+    .album-name {
+        display: inline;
+    }
+}
+  
+@media (min-width: 768px) {
+    .artist-name {
+        display: inline;
+    }
+}
