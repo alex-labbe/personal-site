@@ -1,5 +1,12 @@
 .navbar{
     margin-top: 30px;
+    padding: 8px;
+    margin-bottom: 8px;
+    padding-bottom: 0px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
 }
 .navbar ul{
     list-style-type: none;

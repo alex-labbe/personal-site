@@ -30,7 +30,7 @@ export default function AddAlbumByURI() {
 
       // first get the information about the album with GEt api/spotify with the access token and the uri passed in, save these to consts?
       const albumInput = {
-        ...form, access_token: accessToken
+        access_token: accessToken, spotifyURI: form.spotifyURI
       }
       await axios
         .post('http://localhost:5000/api/spotify', albumInput)
@@ -45,10 +45,10 @@ export default function AddAlbumByURI() {
       const newAlbum = { 
         albumName: album.albumName,
         artistName: album.artistName,
-        rating: rating,
         spotifyURI: spotifyURI,
         img: album.img,
-        link: album.link
+        link: album.link,
+        rating: rating
       }
       await axios
         .post("http://localhost:5000/api/album/", newAlbum)

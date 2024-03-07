@@ -5,7 +5,7 @@ require('dotenv').config()
 
 // take uri and access token and return json of the stuff i want
 router.post('/', async (req, res) => {
-    const { access_token, rating, spotifyURI } = req.body;
+    const { spotifyURI, access_token} = req.body;
     
     const link = `https://api.spotify.com/v1/albums/${spotifyURI}`
     try {
@@ -49,5 +49,32 @@ router.post('/key', async (req, res) => {
     }
 
 })
+///////////////////////////////////////////
+router.post('/login', (req, res) => {
+    
+    var code = req.body.code || null;
+    axios({
+       method: 'post',
+        url: 'https://accounts.spotify.com/api/token',
+        data: {
+            code: code,
+            redirect_uri: 'http://localhost:5173/poemify',
+            grant_type: 'authorization_code'
+        },
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Basic ' + (new Buffer.from(process.env.CLIENT_ID + ':' + process.env.CLIENT_SECRET).toString('base64'))
+        },
+        }).then(response => {
+            res.json({
+                access_token: response.data.access_token,
+                refresh_token: response.data.refresh_token,
+                expires_in: response.data.expires_in
+            })
+            }).catch(err => {
+                res.sendStatus(400);
+                console.log(err);
+        });
+});
 
 module.exports = router;
