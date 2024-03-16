@@ -12,7 +12,7 @@ export default function Poemify( poemData ) {
         setLoading(true);
         axios({
             method: 'POST',
-            url: `http://${import.meta.env.VITE_REACT_APP_API_URL}/api/gpt/generate`,
+            url: `https://${import.meta.env.VITE_REACT_APP_API_URL}/api/gpt/generate`,
             params: {
                 poemData: songs,
             }

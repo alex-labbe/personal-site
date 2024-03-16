@@ -6,7 +6,7 @@ export default function AddAlbumByURI() {
     const [accessToken, setAccessToken] = useState(null);
     useEffect(() => {
       if(accessToken) { return ;}
-        axios.post(`http://${import.meta.env.VITE_REACT_APP_API_URL}/api/spotify/key`)
+        axios.post(`https://${import.meta.env.VITE_REACT_APP_API_URL}/api/spotify/key`)
             .then(res => {
                 setAccessToken(res.data.access_token);
         })
@@ -33,7 +33,7 @@ export default function AddAlbumByURI() {
         access_token: accessToken, spotifyURI: form.spotifyURI
       }
       await axios
-        .post(`http://${import.meta.env.VITE_REACT_APP_API_URL}/api/spotify`, albumInput)
+        .post(`https://${import.meta.env.VITE_REACT_APP_API_URL}/api/spotify`, albumInput)
         .then((res) => {
           sendAlbum(res.data, form.rating, form.spotifyURI);
           navigate("/music")
@@ -51,7 +51,7 @@ export default function AddAlbumByURI() {
         rating: rating
       }
       await axios
-        .post(`http://${import.meta.env.VITE_REACT_APP_API_URL}/api/album/`, newAlbum)
+        .post(`https://${import.meta.env.VITE_REACT_APP_API_URL}/api/album/`, newAlbum)
         .then((res) => {
           console.log(res.status)
         })

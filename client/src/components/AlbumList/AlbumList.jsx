@@ -19,7 +19,7 @@ function AlbumList() {
             })
         }*/
             console.log('hi')
-            const response = await fetch(`http://${import.meta.env.VITE_REACT_APP_API_URL}/api/album`,)
+            const response = await fetch(`https://${import.meta.env.VITE_REACT_APP_API_URL}/api/album`,)
             const json = await response.json()
             console.log(json)
 

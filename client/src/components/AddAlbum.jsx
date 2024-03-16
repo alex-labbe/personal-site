@@ -22,7 +22,7 @@ export default function AddAlbum() {
    e.preventDefault();
    const newAlbum = { ...form };
    await axios
-    .post(`http://${import.meta.env.VITE_REACT_APP_API_URL}/api/album/`, newAlbum)
+    .post(`https://${import.meta.env.VITE_REACT_APP_API_URL}/api/album/`, newAlbum)
     .then((res) => {
       setForm({ albumName: "", artistName: "", rating: "", spotifyURI: "" });
       navigate("/music");
