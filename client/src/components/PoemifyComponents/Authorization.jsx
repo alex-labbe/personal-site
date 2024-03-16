@@ -6,11 +6,11 @@ export default function Authorization( code ) {
 
     const [accessToken, setAccessToken] = useState()
     useEffect(() => {
-        axios.post("http://localhost:5000/api/spotify/login", {code})
+        axios.post(`https://${import.meta.env.VITE_REACT_APP_API_URL}/api/spotify/login`, {code})
         .then(res => {
             console.log(res)
             setAccessToken(res.data.access_token)
-            window.history.pushState({}, null, "/poemify");
+            window.history.pushState({}, null, "/poemify/");
         })
         .catch(() => {
             window.location = '/poemify'
