@@ -6,7 +6,7 @@ import querystring from 'query-string';
 
 var client_id = 'e6bce471b0534241bf5288b1f3ad8d7c';
 var scope = "user-top-read";
-var redirect_uri = "http://localhost:5173/poemify"
+var redirect_uri = "https://personal-site-crn.pages.dev/poemify"
 
 var authURL = 'https://accounts.spotify.com/authorize?' + 
     querystring.stringify({
