@@ -46,7 +46,7 @@ export default function Dashboard({ code }) {
             songs += song.name + ' - ' + song.artists[0].name + '\n'
         });
         setPoemData(songs);
-        console.log(songs);
+        //console.log(songs);
     }, [topSongs]);
 
     if(dashLoaded){

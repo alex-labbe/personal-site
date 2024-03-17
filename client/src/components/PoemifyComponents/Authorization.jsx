@@ -8,13 +8,13 @@ export default function Authorization( code ) {
     useEffect(() => {
         axios.post(`https://${import.meta.env.VITE_REACT_APP_API_URL}/api/spotify/login`, {code})
         .then(res => {
-            console.log(res)
+            //console.log(res)
             setAccessToken(res.data.access_token)
             window.history.pushState({}, null, "/poemify/");
         })
         .catch((err) => {
-            console.log(err.message)
-            //window.location = '/poemify'
+            //console.log(err.message)
+            window.location = '/poemify'
         })
     }, [code])
 

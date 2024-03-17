@@ -13,7 +13,7 @@ import Login from "./Login";
 import PoemifyHome from "./PoemifyHome";
 const code = new URLSearchParams(window.location.search).get("code");
 function PoemifyApp() {
-    console.log(code)
+    //console.log(code)
     return (
         <>
             <h1>Poemify</h1>

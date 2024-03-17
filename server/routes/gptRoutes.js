@@ -17,12 +17,12 @@ router.post('/generate', async (req, res) => {
             "Authorization": "Bearer " + process.env.OPENAI_API_KEY
         }
     });
-    console.log("here at openai")
+    //console.log("here at openai")
     openai.post("/chat/completions", {
         model: "gpt-3.5-turbo",
         messages: [{role: "user", content: prompt}],
     }).then(response => {
-        console.log(response.data.choices[0].message.content)
+        //console.log(response.data.choices[0].message.content)
         res.json({  
             poem: response.data.choices[0].message.content,
         })

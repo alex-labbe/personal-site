@@ -18,10 +18,10 @@ function AlbumList() {
                 console.log(err);
             })
         }*/
-            console.log('hi')
+            //console.log('hi')
             const response = await fetch(`https://${import.meta.env.VITE_REACT_APP_API_URL}/api/album`,)
             const json = await response.json()
-            console.log(json)
+            //console.log(json)
 
             if (response.ok) {
                 setAlbums(json)
@@ -57,7 +57,7 @@ function AlbumList() {
                     would be much more boring, because i would not spend the time to add any albums that i do not like. thus i will try my best to rate an album as well as i can.
                 </p>
             </div>
-            <AddAlbumByURI />
+            {/*<AddAlbumByURI />*/}
         </>
     )
 }
