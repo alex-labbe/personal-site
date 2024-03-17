@@ -18,7 +18,7 @@ export default function Poemify( poemData ) {
             }
         }).then((response) =>{
             setPoem(response.data.poem);
-            console.log(response.data.poem);
+            //console.log(response.data.poem);
             //return response.data.poem;
         }).catch(error => {
             console.log(error);
