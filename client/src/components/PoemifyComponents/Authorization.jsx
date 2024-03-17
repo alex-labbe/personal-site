@@ -13,7 +13,7 @@ export default function Authorization( code ) {
             window.history.pushState({}, null, "/poemify/");
         })
         .catch(() => {
-            window.location = '/poemify'
+            //window.location = '/poemify'
         })
     }, [code])
 
