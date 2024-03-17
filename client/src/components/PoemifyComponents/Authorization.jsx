@@ -12,7 +12,8 @@ export default function Authorization( code ) {
             setAccessToken(res.data.access_token)
             window.history.pushState({}, null, "/poemify/");
         })
-        .catch(() => {
+        .catch((err) => {
+            console.log(err.message)
             //window.location = '/poemify'
         })
     }, [code])
