@@ -20,7 +20,7 @@ app.use('/api/album', albumRoutes);
 app.use('/api/spotify', spotifyRoutes);
 app.use('/api/gpt', gptRoutes);
 
-mongoose.connect(process.env.MONGO_PRIVATE_URL)
+mongoose.connect('mongodb://mongo:UUfuTJUeofECrGFtUquCtIantYwgeVKo@mongodb.railway.internal:27017')
   .then(() => {
     app.listen(process.env.PORT, "0.0.0.0", () => {
       console.log('connected to db and listening on port ' + process.env.PORT);
