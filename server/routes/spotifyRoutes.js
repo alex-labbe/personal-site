@@ -58,7 +58,7 @@ router.post('/login', (req, res) => {
         url: 'https://accounts.spotify.com/api/token',
         data: {
             code: code,
-            redirect_uri: 'https://alexlabbe/poemify',
+            redirect_uri: 'https://alexlabbe.com/poemify',
             grant_type: 'authorization_code'
         },
         headers: {
@@ -71,9 +71,9 @@ router.post('/login', (req, res) => {
                 refresh_token: response.data.refresh_token,
                 expires_in: response.data.expires_in
             })
-            }).catch(err => {
-                res.sendStatus(400);
-                console.log(err);
+        }).catch(err => {
+            res.sendStatus(400);
+            console.log(err);
         });
 });
 
