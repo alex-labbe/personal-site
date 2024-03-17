@@ -22,7 +22,7 @@ app.use('/api/gpt', gptRoutes);
 
 mongoose.connect(process.env.ATLAS_URI)
   .then(() => {
-    app.listen(process.env.PORT, () => {
+    app.listen(process.env.MONGO_PRIVATE_URL, () => {
       console.log('connected to db and listening on port ' + process.env.PORT);
     });
   })

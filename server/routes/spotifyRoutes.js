@@ -58,7 +58,7 @@ router.post('/login', (req, res) => {
         url: 'https://accounts.spotify.com/api/token',
         data: {
             code: code,
-            redirect_uri: 'https://personal-site-crn.pages.dev/poemify',
+            redirect_uri: 'https://alexlabbe/poemify',
             grant_type: 'authorization_code'
         },
         headers: {
