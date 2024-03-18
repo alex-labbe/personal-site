@@ -36,6 +36,7 @@ function AlbumList() {
     const fantano = <a href='https://www.youtube.com/@theneedledrop' target='_blank'>anthony fantano</a>
     const rym = <a href='https://rateyourmusic.com/' target='_blank'>rateyourmusic</a>
     const letterboxd = <a href='https://letterboxd.com/' target='_blank'>letterboxd</a>
+    const Go_command_line_interface = <a href='https://github.com/alex-labbe/album-rating-command-line-app/' target='_blank'>Go command line interface</a>
 
     return (
         <>
@@ -49,7 +50,7 @@ function AlbumList() {
 
             </table>
             <div className="statement">
-                <p>while i had a lot of fun creating this rating list, learning the mern stack, and writing the Go command line interface (the main motivation for making this rating list)
+                <p>while i had a lot of fun creating this rating list, learning the mern stack, and writing the {Go_command_line_interface} (the main motivation for making this rating list)
                     that makes adding albums to this super simple, <b>rating art is something i fundamentally disagree with.</b> i am a big hip-hop guy but the community on twitter and other socials is just so toxic and feel like absolutely needs to be rated and ranked. 
                     the amount of {topster} i've seen just hurts my brain. the worst part is that they always look the same, like the one i linked. i feel like i am unable to objectively give an album, or any art, a numeric 1-10 rating. my
                     opinions have been clouded by my time lurking in the hip hop community and {fantano} and {rym}. i really wish i could form objective opinions but it is so difficult when you have these faceless entities online telling you what is good music and what is bad music. i 

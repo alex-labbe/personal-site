@@ -30,6 +30,7 @@ router.get('/:id', async (req, res) => {
 // add an album
 router.post('/', async (req, res) => {
   const {albumName, artistName, spotifyURI, img, link, rating} = req.body;
+
   // check if an album with this uri already exists. # need to fix this at some point
   try {
     const album = await Album.create({ albumName, artistName, rating, spotifyURI, img, link })
